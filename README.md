@@ -1,2 +1,2 @@
 # ChallengeLandingPage
-Challenge Landing page from Platzi
+Challenge Landing page
