@@ -14,23 +14,37 @@
         <img src="../src/img/Find Yourself.png" alt="Main Logo">
         <a href="./index.html">Home</a>
         <a href="/">About</a>
-        <div id="cartContainer">
+        <button id="cartButton">
             <img src="../src/img/icons8-carrito-de-compras-24.png" alt="Shopping cart">
-        </div>
+            <span id="cartCounter">0</span> 
+        </button>
     </nav>
 
-    <section class="section1">
+    <section class="productSection">
+        
         <h2>You may see random images that don't match the product, that's because this is a practice project, not an actual E-commerce.</h2>
         <input type="text" placeholder="Find your product">
+
         <div class="products">
   
         </div>
+
+        <button class="previousPage">Previous Page</button>
+        <button class="nextPage">Next Page</button>
     </section>
 
-    <button class="previousPage">Previous Page</button>
-    <button class="nextPage">Next Page</button>
+    <section class="cartSection">
+    <div id="cartContainer">
+
+    </div>
+    <p class="productPrice">Total amount: $<span id="totalAmount">0</span></p>
+    <button id="emptyCart" class="addButton">Clean cart</button>
+    </section>
+
+
     
     <script src="../src/index.js"></script>
 </body>
 
 </html>
+
