@@ -11,11 +11,11 @@
 </head>
 
 <body class="bg-secondary">
-    <nav class="navbar">
-        <img src="../src/img/Find Yourself.png" alt="Main Logo">
+
+    <nav class="navBar">
+        <img src="../src/img/Find Yourself.png" alt="Main Logo" class="mainLogo">
         <a href="./index.html">Home</a>
-        <a href="/">About</a>
-        <button id="cartButton">
+        <button id="cartButton" class="btn btn-outline-light">
             <img src="../src/img/icons8-carrito-de-compras-24.png" alt="Shopping cart">
             <span id="cartCounter">0</span> 
         </button>
@@ -24,7 +24,7 @@
     <div class="container">
         <table class="table text-white">
             <thead>
-              <tr>
+                <tr>
                 <th scope="col">#</th>
                 <th scope="col">Item</th>
                 <th scope="col">Quantity</th>
@@ -32,7 +32,7 @@
                 <th scope="col">Total Amount</th>
               </tr>
             </thead>
-            <tbody id="items"></tbody>
+            <tbody id="items" class="active"></tbody>
             <tfoot>
               <tr id="footer">
                 <th scope="row" colspan="5">Empty cart</th>
@@ -87,11 +87,11 @@
     </template>
 
     <div class="pageButtons position-relative">
-        <button class="position-absolute top-0 start-50 translate-middle-x nextPage btn btn-outline-dark">Load more</button>
+        <button class="position-absolute top-0 start-50 translate-middle-x nextPage btn btn btn-outline-light">Load more</button>
     </div>
 
 
-    <script src="../src/index.js"></script>
+    <script src="../src/index.js" type="module"></script>
 </body>
 
 </html>

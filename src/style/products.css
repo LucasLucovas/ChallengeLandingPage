@@ -1,5 +1,39 @@
-/* #items,.table{
-    display:none;
-} 
-esto es para ocultar el carrito hay que meterlo en un modal
-*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+.table{
+    display: none;
+}
+
+#items{
+    display: none;
+}
+
+#items, .active{
+    display: table-row-group;
+    
+}
+
+
+
+
+
+.mainLogo{
+    height: 100px;
+    width: 110px;
+    border-radius: 50%;
+    margin-left:20px;
+}
+.navBar{
+    border-bottom: 1px solid #000;
+}
+
+
+.container{
+    margin-top: 100px;
+}
