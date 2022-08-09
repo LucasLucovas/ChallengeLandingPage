@@ -107,9 +107,9 @@ const paintCart = () => {
     items.innerHTML = ''
     Object.values(cart).forEach(product => {
         //esto ya no viene de la base de datos o de la API sino de el objeto template que creamos en setCart
-        templateCart.querySelector('th').textContent = product.id
-        templateCart.querySelectorAll('td')[0].textContent = product.name
-        templateCart.querySelectorAll('td')[1].textContent = product.quantity
+        templateCart.querySelector('.idObjectCart').textContent = product.id
+        templateCart.querySelector('.nameObjectCart').textContent = product.name
+        templateCart.querySelector('.quantityObjectCart').textContent = product.quantity
         templateCart.querySelector('.btn-info').dataset.id = product.id
         templateCart.querySelector('.btn-danger').dataset.id = product.id
         templateCart.querySelector('span').textContent = product.quantity * product.price
@@ -138,7 +138,7 @@ const paintFooter = () =>{
     const nQuantity = Object.values(cart).reduce((acc,{quantity}) => acc + quantity,0)
     const nPrice = Object.values(cart).reduce((acc,{quantity,price}) => acc + quantity * price ,0)
 
-    templateFooter.querySelectorAll('td')[0].textContent = nQuantity
+    templateFooter.querySelector('.totalQuantity').textContent = nQuantity
     templateFooter.querySelector('span').textContent = nPrice
     cartCounter.textContent = nQuantity
 

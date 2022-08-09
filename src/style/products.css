@@ -5,35 +5,121 @@
 }
 
 
-
-.table{
-    display: none;
+body{
+    position: relative;
 }
-
-#items{
-    display: none;
-}
-
-#items, .active{
-    display: table-row-group;
-    
-}
-
-
-
-
 
 .mainLogo{
     height: 100px;
-    width: 110px;
-    border-radius: 50%;
-    margin-left:20px;
+    width: 150px;
+    border-top-right-radius: 50%;
+    border-bottom-right-radius: 50%;
+    position: absolute;
+    left: 0;
+
 }
 .navBar{
     border-bottom: 1px solid #000;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    background: rgb(80,72,112);
+    background: linear-gradient(270deg, rgba(80,72,112,1) 0%, rgba(10,0,40,1) 100%);
+}
+.navBar a{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-family: 'Oregano', cursive;
+    font-size: 30px;
 }
 
+#cartButton{
+    position: fixed;
+    top: 30px;
+    right: 10px;
+}
 
 .container{
     margin-top: 100px;
+}
+
+
+
+
+.active{
+    visibility: hidden;
+}
+
+.cartHeader{
+    display: flex;
+    width: 390px;
+}
+
+.cartObjectContainer{
+    display: flex;
+    text-align: center;
+    font-size: 15px;
+}
+.idObjectCart{
+    width: 40px;
+}
+
+.nameObjectCart{
+    width: 200px;
+}
+
+.quantityObjectCart{
+    width: 40px;
+}
+
+.tableContainer{
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    position: fixed;
+    z-index: 10;
+    top: 100px;
+    right: 0;
+}
+
+.table{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 500px;
+    border-radius: 10px;
+    margin: 20px 0 20px 20px;
+    background-color: rgba(27, 39, 39,0.9);
+}
+
+
+
+
+
+
+
+#footer{
+    margin-top: 30px;
+    margin-bottom: 10px;
+    width: 350px;
+}
+
+.footerContainer{
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid black;
+    border-radius: 10px;
+    align-items: center;
+}
+
+.totalAmountFooter{
+    margin: 0;
+}
+
+.totalQuantity{
+    margin: 0;
+    margin-bottom: 5px;
 }
