@@ -1,0 +1,33 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+.mainLogo{
+    height: 100px;
+    width: 150px;
+    border-top-right-radius: 50%;
+    border-bottom-right-radius: 50%;
+    position: absolute;
+    left: 0;
+
+}
+.navBar{
+    border-bottom: 1px solid #000;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    background: rgb(80,72,112);
+    background: linear-gradient(270deg, rgba(80,72,112,1) 0%, rgba(10,0,40,1) 100%);
+}
+.navBar a{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-family: 'Oregano', cursive;
+    font-size: 30px;
+}

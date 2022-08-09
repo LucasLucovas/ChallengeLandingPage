@@ -12,6 +12,8 @@ document.addEventListener('DOMContentLoaded',()=>{
         cart = JSON.parse(localStorage.getItem('cart'))
         paintCart()
     }
+    table.classList.toggle('active')
+    items.classList.toggle('active')
 })
 
 cards.addEventListener('click', e => {
