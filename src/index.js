@@ -25,13 +25,27 @@ items.addEventListener('click', e =>{
 })
 
 
+//buscador
+document.addEventListener('keyup', e =>{
+    
+    if (e.target.matches("#inputFilter")) {
+        
+        if(e.key === 'Escape')e.target.value = ""
+
+        document.querySelectorAll('.card').forEach(product =>{
+            product.textContent.toLowerCase().includes(e.target.value.toLowerCase())
+                ?product.classList.remove("filter")
+                :product.classList.add('filter')
+        })
+    }
+})
+
 
    
    
 
 const fetchData = async ()=>{
     try {
-
         let res = await fetch(`${API}offset=20&limit=9`)
         let data = await res.json()
 
@@ -47,11 +61,20 @@ const fetchData = async ()=>{
                 // console.log('estoy en el final del scroll')
              }
         })
-         paintCards(data)
+
+        paintCards(data)
     } catch (error) {
         console.error(error)
     }
 }
+
+
+
+
+
+
+
+
 
 const paintCards = data => {
     pageCounter+= 10
