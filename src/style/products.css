@@ -39,6 +39,8 @@ body{
     position: fixed;
     top: 30px;
     right: 10px;
+    z-index: 20;
+    color: rgb(55, 211, 216);
 }
 
 .container{
@@ -152,4 +154,13 @@ body{
     display: flex;
     justify-content: center;
     margin-top: 50px ;
+}
+
+
+
+@media screen and (max-width: 415px) {
+
+    #cartButton{
+        position: unset;
+    }
 }
