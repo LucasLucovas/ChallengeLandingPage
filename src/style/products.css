@@ -22,7 +22,7 @@ body{
     border-bottom: 1px solid #000;
     position: relative;
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
     height: 100px;
     background: rgb(80,72,112);
@@ -127,6 +127,9 @@ body{
 }
 
 
+#lastButton{
+    width: 200px;
+}
 
 
 .filter{
