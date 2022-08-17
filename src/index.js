@@ -49,18 +49,11 @@ const fetchData = async ()=>{
         let res = await fetch(`${API}offset=20&limit=9`)
         let data = await res.json()
 
-        window.addEventListener('scroll',()=>{
-           
-            if (document.body.scrollHeight - window.innerHeight === window.scrollY) {
-                btnNextPage.addEventListener('click',async ()=>{
-                    let res = await fetch(`${API}offset=${pageCounter}&limit=9`)
-                    let data = await res.json()
-                    paintCards(data)
-                },{once:true}) 
-                // console.log(pageCounter)
-                // console.log('estoy en el final del scroll')
-             }
-        })
+        btnNextPage.addEventListener('click',async ()=>{
+            let res = await fetch(`${API}offset=${pageCounter}&limit=9`)
+            let data = await res.json()
+            paintCards(data)
+        }) 
 
         paintCards(data)
     } catch (error) {

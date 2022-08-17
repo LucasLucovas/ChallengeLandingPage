@@ -7,6 +7,7 @@
 
 body{
     position: relative;
+    background-color: rgb(37, 35, 35);
 }
 
 .mainLogo{
@@ -133,6 +134,24 @@ body{
     width: 200px;
 }
 
+.pageButtons{
+    display: flex;
+    margin: 20px;
+    justify-content: center;
+}
+
+footer{
+    border-top: 1px solid black;
+}
+
+footer a:nth-child(1){
+    text-decoration: none;
+    color: rgb(55, 211, 216);
+    margin: 20px;
+    border:1px solid white;
+    border-radius: 5px;
+    padding: 5px;
+}
 
 .filter{
     display: none;
