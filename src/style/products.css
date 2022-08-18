@@ -157,25 +157,63 @@ footer a:nth-child(1){
     display: none;
 }
 
-#inputFilter{
-    border-radius: 10px;
-    height: 30px;
-    width: 250px;
-    border: 1px solid #000;
-    outline: none;
-    text-align: center;
-    background-color:rgba(64, 2, 100,0.4);
-    color: #fff;
-    font-family: 'Roboto', sans-serif;
-}
 
+
+/*Input filter Reposo */
 .filterContainer{
     display: flex;
     justify-content: center;
     margin-top: 50px ;
 }
+#inputFilter{
+    display: block;
+    width: 100%;
+    border: none;
+    outline: none;
+    background-color:rgb(37, 35, 35);
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+    padding: 0;
+}
 
 
+.filterContainer label{
+    display: block;
+    width: 300px;
+    border: 2px solid silver;
+    padding: 8px 10px;
+    position: relative;
+    border-radius: 4px;
+    transition: .25s;
+}
+
+.filterContainer label span{
+    color: silver;
+    font-family: 'Roboto', sans-serif;
+    position: absolute;
+    top: 8px;
+    left: 10px;
+    transition: .25s;
+}
+
+/*Input filter Focus */
+
+.filterContainer label.focus{
+    border-color: rgb(110, 58, 58);
+}
+
+.filterContainer label span.focus{
+    color: rgb(110, 58, 58);
+}
+
+/*Input filter Top */
+.filterContainer label span.top{
+    left: 2px;
+    top: -10px;
+    font-size: 12px;
+    background-color: rgb(37, 35, 35);
+    padding: 0 5px;
+}
 
 @media screen and (max-width: 415px) {
 

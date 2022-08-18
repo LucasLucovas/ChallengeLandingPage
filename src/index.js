@@ -1,4 +1,4 @@
-import {API,cards,items,footer,table,cartCounter,btnNextPage,btnCart,templateCard,templateFooter,templateCart,fragment} from "./modules/const.js"
+import {API,cards,items,footer,table,cartCounter,btnNextPage,btnCart,templateCard,templateFooter,templateCart,fragment,inputFilter} from "./modules/const.js"
 
 
 let pageCounter = 20
@@ -23,6 +23,27 @@ cards.addEventListener('click', e => {
 items.addEventListener('click', e =>{
     btnAction(e)
 })
+
+btnCart.addEventListener('click',()=>{
+
+    table.classList.toggle('active')
+    items.classList.toggle('active')
+
+})
+
+inputFilter.onfocus = () =>{
+    inputFilter.previousElementSibling.classList.add('top') // previousElementSibling es el elemento previo hermano
+    inputFilter.previousElementSibling.classList.add('focus')
+    inputFilter.parentNode.classList.add('focus')
+}
+inputFilter.onblur = () =>{
+    inputFilter.value = inputFilter.value.trim() //evita que queden los espacios escritos en el input
+    if(inputFilter.value.trim().length == 0){
+        inputFilter.previousElementSibling.classList.remove('top')
+    }
+    inputFilter.previousElementSibling.classList.remove('focus')
+    inputFilter.parentNode.classList.remove('focus') //parent node es el nodo padre en este caso el label
+}
 
 
 //buscador
@@ -192,9 +213,3 @@ const btnAction = e =>{
     e.stopPropagation()
 }
 
-btnCart.addEventListener('click',()=>{
-
-    table.classList.toggle('active')
-    items.classList.toggle('active')
-
-})

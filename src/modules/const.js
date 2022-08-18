@@ -2,6 +2,7 @@ const API = `https://api.escuelajs.co/api/v1/products?`
 const cards = document.getElementById('cards')
 const items = document.getElementById('items')
 const footer = document.getElementById('footer')
+const inputFilter = document.getElementById('inputFilter')
 const table = document.querySelector('.table')
 const cartCounter = document.getElementById('cartCounter')
 const btnNextPage = document.querySelector('.nextPage')
@@ -13,4 +14,4 @@ const fragment = document.createDocumentFragment()
 
 
 
-export {API,cards,items,footer,table,cartCounter,btnNextPage,btnCart,templateCard,templateFooter,templateCart,fragment}
+export {API,cards,items,footer,table,cartCounter,btnNextPage,btnCart,templateCard,templateFooter,templateCart,fragment,inputFilter}
